@@ -416,7 +416,7 @@ if st.session_state['df'] is not None:
             corr_matrix = df[num_cols].corr()
             
             st.markdown("### Correlation Heatmap")
-            fig, ax = plt_subplots.subplots(figsize=(10, 8))
+            fig, ax = plt.subplots(figsize=(10, 8))
             sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5, ax=ax, vmin=-1, vmax=1)
             st.pyplot(fig)
             
@@ -449,3 +449,5 @@ if st.session_state['df'] is not None:
 else:
     st.title("📊 Auto Analytics Dashboard")
     st.info("👈 Please upload a CSV file from the sidebar to begin.")
+
+
